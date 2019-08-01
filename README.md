@@ -11,6 +11,11 @@ This is a small demostration of leveraging the power of universal models and net
 4. Create bin directory `mkdir bin`
 4. Build native-binary `shadow-cljs clj-run fncli.build/native`
 
+## Binary Install
+1. Download release for your OS https://github.com/gaberger/fncli/releases
+2. Run `fncli-<osdep>`
+
+
 ## Dependencies
 1. Must have an account on the demo server
 2. Must set the environmental variables
