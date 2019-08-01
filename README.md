@@ -35,4 +35,4 @@ Commands:
   ```
 
 ## SubCommands
-
+[https://github.com/gaberger/fncli/blob/master/images/show-interfaces.png]
