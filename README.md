@@ -35,4 +35,12 @@ Commands:
   ```
 
 ## SubCommands
-![alt text](https://github.com/gaberger/fncli/blob/master/images/show-interfaces.png)
+```$ fncli-linux show interfaces```
+
+![show-interfaces](https://github.com/gaberger/fncli/blob/master/images/show-interfaces.png)
+
+
+```# fncli-linux show config atl-ce01```
+
+![show-config](https://github.com/gaberger/fncli/blob/master/images/show-config.png)
+
