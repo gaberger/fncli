@@ -3,7 +3,13 @@ Forward Networks CLI Demo
 
 This is a small demostration of leveraging the power of universal models and network search to simplify day to day operations tasks.
 
+## Build
 
+1. Install shadow-cljs `npm install shadow-cljs -g`
+2. Clone repository `git clone https://github.com/gaberger/fncli.git`
+3. Download dependencies `npm install`
+4. Create bin directory `mkdir bin`
+4. Build native-binary `shadow-cljs clj-run fncli.build/native`
 
 ## Dependencies
 1. Must have an account on the demo server
