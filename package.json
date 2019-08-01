@@ -1,0 +1,34 @@
+{
+  "name": "fncli",
+  "version": "0.0.1",
+  "description": "Forward Networks CLI",
+  "main": "fncli.js",
+  "bin": "target/fncli.js",
+  "scripts": {
+    "watch": "shadow-cljs watch app",
+    "compile": "shadow-cljs compile app",
+    "build": "shadow-cljs release app"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "js-yaml": "^3.13.1",
+    "pkg": "^4.4.0",
+    "prompts": "^2.1.0",
+    "w3c-xmlhttprequest-plus": "^2.2.0",
+    "which": "^1.3.1"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.8.42",
+    "source-map-support": "^0.5.12"
+  },
+  "author": "Gary Berger",
+  "license": "MIT",
+  "pkg": {
+    "scripts": "target/**/*.js",
+    "assets": "dependencies/**/*",
+    "targets": [
+      "linux",
+      "macos",
+      "win"
+    ]}
+}
