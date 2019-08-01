@@ -1,7 +1,7 @@
 # fncli
 Forward Networks CLI Demo
 
-This is a small demostration of leveraging the power of universal models and network search to simplify day to day operations tasks.
+This is a small demonstration of leveraging the power of universal models and network search to simplify day to day operations tasks.
 
 ## Build
 
