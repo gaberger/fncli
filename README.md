@@ -1,7 +1,7 @@
 # fncli
 Forward Networks CLI Demo
 
-This is a small demostration of leveraging the power of universal models and network search to simplify day to day operations tasks.
+This is a small demonstration of leveraging the power of universal models and network search to simplify day to day operations tasks.
 
 ## Build
 
@@ -10,6 +10,11 @@ This is a small demostration of leveraging the power of universal models and net
 3. Download dependencies `npm install`
 4. Create bin directory `mkdir bin`
 4. Build native-binary `shadow-cljs clj-run fncli.build/native`
+
+## Binary Install
+1. Download release for your OS https://github.com/gaberger/fncli/releases
+2. Run `fncli-<osdep>`
+
 
 ## Dependencies
 1. Must have an account on the demo server
