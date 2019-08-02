@@ -49,7 +49,7 @@
                                      :json-params {:query show-interfaces-query}}))]
         (condp = (:status response)
           200 (:body response)
-          (do (println response)
+          (do (println "Something went wrong")
                 nil)))))
 
 
@@ -111,16 +111,3 @@
 (defn main! []
   (let [program  (command-handler)]       
       (.parse program (.-argv js/process))))
-
-         
-
-(def d [{:name :foo :interfaces [{:name 1} {:name 2}]}
-        {:name :bar :interfaces [{:name 1} {:name 2}]}])
-(defn r [m] 
-  (reduce (fn [acc a]
-            (let [name (:name a)
-                  interfaces (:interfaces a)
-                  interface-record (map #(conj {:device-name name} %) interfaces)]
-              (concat acc interface-record)))
-              []
-              m))
