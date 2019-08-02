@@ -34,13 +34,13 @@
 
 
 (defn parse-intf [m]
-  (reduce
-   (fn [acc record]
-     (let [device-name {:device-name (:name record)}
-           device-record (conj device-name  (first (:interfaces record)))]
-       (conj acc device-record)))
-   []
-   m))
+    (reduce (fn [acc device]
+              (let [device-name {:device-name (:name device)}
+                    interfaces (:interfaces device)
+                    interface-record (map #(conj device-name %) interfaces)]
+                (concat acc interface-record)))
+            []
+            m))
 
 (defn show-interfaces []
   (go (let [response (<! (http/post url
@@ -113,3 +113,14 @@
       (.parse program (.-argv js/process))))
 
          
+
+(def d [{:name :foo :interfaces [{:name 1} {:name 2}]}
+        {:name :bar :interfaces [{:name 1} {:name 2}]}])
+(defn r [m] 
+  (reduce (fn [acc a]
+            (let [name (:name a)
+                  interfaces (:interfaces a)
+                  interface-record (map #(conj {:device-name name} %) interfaces)]
+              (concat acc interface-record)))
+              []
+              m))
